@@ -25,8 +25,8 @@ O experimento seguiu as seguintes etapas:
 
 Os resultados obtidos foram os seguintes:
 
-*   **Limiar de Otsu Calculado:** O algoritmo de Otsu calculou um limiar de `%.2f`.
-*   **Imagem Limiarizada por Otsu:** A imagem resultante apresentou uma segmentação binária clara, separando as regiões de maior intensidade (objeto) das de menor intensidade (fundo) com base no limiar calculado.
+*   **Limiar de Otsu Calculado:** 
+*   **Imagem Limiarizada por Otsu:** A imagem resultante apresentou uma segmentação binária, separando as regiões de maior intensidade (objeto) das de menor intensidade (fundo) com base no limiar calculado.
 *   **Imagem com Bordas Laplaciano:** A imagem resultante realçou as bordas e contornos presentes na imagem original, com maior ou menor intensidade dependendo da variação de intensidade dos pixels na borda.
 
 
@@ -56,10 +56,7 @@ A combinação dessas técnicas pode ser poderosa em aplicações onde é necess
 # Questão 02
 
 ## Fecho Convexo (Convex Hull)
-O Fecho Convexo de um conjunto de pontos é o menor polígono convexo que contém todos esses pontos.
-Em termos de representação de forma, o Fecho Convexo de um objeto (representado pelos pontos de seu contorno)
-captura a 'envoltória' da forma, ignorando concavidades internas ou irregularidades na fronteira.
-Imagine esticar um elástico em torno de uma forma; o elástico formaria o Fecho Convexo.
+O Fecho Convexo de um conjunto de pontos é o menor polígono convexo que contém todos esses pontos. Em termos de representação de forma, o Fecho Convexo de um objeto (representado pelos pontos de seu contorno) captura a 'envoltória' da forma, ignorando concavidades internas ou irregularidades na fronteira.
 
 ### Como representa a geometria do objeto
 - Fornece uma representação simplificada da forma geral e extensão do objeto.
@@ -73,12 +70,7 @@ Imagine esticar um elástico em torno de uma forma; o elástico formaria o Fecho
 - Pré-processamento para outras técnicas de representação de forma.
 
 ## Assinatura de Forma (Distância do Centroide à Fronteira)
-A Assinatura de Forma baseada na Distância do Centroide à Fronteira é uma técnica unidimensional
-que representa uma forma descrevendo a distância de cada ponto no contorno da forma até o seu centroide.
-Para calcular esta assinatura, primeiro determina-se o centroide da forma (o ponto médio ou centro de massa).
-Em seguida, percorre-se o contorno da forma, calculando a distância de cada ponto do contorno até o centroide.
-Esta sequência de distâncias, plotada em função do ângulo ou do índice do ponto ao longo do contorno,
-forma a 'assinatura' da forma.
+A Assinatura de Forma baseada na Distância do Centroide à Fronteira é uma técnica unidimensional que representa uma forma descrevendo a distância de cada ponto no contorno da forma até o seu centroide. Para calcular esta assinatura, primeiro determina-se o centroide da forma (o ponto médio ou centro de massa). Em seguida, percorre-se o contorno da forma, calculando a distância de cada ponto do contorno até o centroide. Esta sequência de distâncias, plotada em função do ângulo ou do índice do ponto ao longo do contorno, forma a 'assinatura' da forma.
 
 ### Como representa a geometria do objeto
 - Captura as variações radiais da forma a partir do seu centro.
