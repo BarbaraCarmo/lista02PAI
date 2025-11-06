@@ -25,7 +25,6 @@ O experimento seguiu as seguintes etapas:
 
 Os resultados obtidos foram os seguintes:
 
-*   **Limiar de Otsu Calculado:** 
 *   **Imagem Limiarizada por Otsu:** A imagem resultante apresentou uma segmentação binária, separando as regiões de maior intensidade (objeto) das de menor intensidade (fundo) com base no limiar calculado.
 *   **Imagem com Bordas Laplaciano:** A imagem resultante realçou as bordas e contornos presentes na imagem original, com maior ou menor intensidade dependendo da variação de intensidade dos pixels na borda.
 
