@@ -52,3 +52,48 @@ A Limiarização de Otsu demonstrou ser eficaz na separação global do objeto p
 Por outro lado, a Detecção de Bordas Laplaciano foi bem-sucedida em identificar as bordas e contornos na imagem. A aplicação prévia do filtro Gaussiano foi crucial para mitigar a sensibilidade do operador Laplaciano ao ruído, resultando em bordas mais nítidas. Contudo, o Laplaciano é um detector de bordas e não um método de segmentação no sentido de separar regiões semanticamente diferentes. A saída é uma imagem que realça as transições de intensidade, o que pode ser útil para outras etapas de processamento de imagem, como extração de características ou reconhecimento de padrões.
 
 A combinação dessas técnicas pode ser poderosa em aplicações onde é necessário primeiro isolar um objeto principal (Otsu) e depois analisar suas características internas ou contornos (Laplaciano). A escolha da técnica mais adequada depende intrinsecamente do objetivo da segmentação e das características da imagem de entrada. Para imagens com ruído significativo, a Limiarização de Otsu pode ser mais robusta para a separação global, enquanto o Laplaciano (com pré-processamento adequado) é superior para a detecção de bordas finas.
+
+# Questão 02
+
+## Fecho Convexo (Convex Hull)
+O Fecho Convexo de um conjunto de pontos é o menor polígono convexo que contém todos esses pontos.
+Em termos de representação de forma, o Fecho Convexo de um objeto (representado pelos pontos de seu contorno)
+captura a 'envoltória' da forma, ignorando concavidades internas ou irregularidades na fronteira.
+Imagine esticar um elástico em torno de uma forma; o elástico formaria o Fecho Convexo.
+
+### Como representa a geometria do objeto
+- Fornece uma representação simplificada da forma geral e extensão do objeto.
+- É útil para analisar a convexidade de uma forma.
+- Pode ser usado para calcular métricas como área do Fecho Convexo, perímetro do Fecho Convexo, ou a razão entre a área do objeto e a área do Fecho Convexo (solidez), que indicam o quão 'cheio' o objeto é.
+
+### Aplicações
+- Detecção de colisão em jogos ou simulações.
+- Simplificação de formas para algoritmos de correspondência mais rápidos.
+- Análise da dispersão de pontos em um conjunto de dados.
+- Pré-processamento para outras técnicas de representação de forma.
+
+## Assinatura de Forma (Distância do Centroide à Fronteira)
+A Assinatura de Forma baseada na Distância do Centroide à Fronteira é uma técnica unidimensional
+que representa uma forma descrevendo a distância de cada ponto no contorno da forma até o seu centroide.
+Para calcular esta assinatura, primeiro determina-se o centroide da forma (o ponto médio ou centro de massa).
+Em seguida, percorre-se o contorno da forma, calculando a distância de cada ponto do contorno até o centroide.
+Esta sequência de distâncias, plotada em função do ângulo ou do índice do ponto ao longo do contorno,
+forma a 'assinatura' da forma.
+
+### Como representa a geometria do objeto
+- Captura as variações radiais da forma a partir do seu centro.
+- Picos na assinatura correspondem a partes do contorno que estão mais distantes do centroide (como pétalas).
+- Vales correspondem a partes do contorno que estão mais próximas do centroide (como a base das pétalas ou concavidades).
+- É invariante à translação, mas pode ser sensível à rotação (embora técnicas de normalização possam mitigar isso).
+- É invariante à escala se normalizada pela maior distância ou pela média das distâncias.
+
+### Aplicações
+- Reconhecimento de objetos (comparando assinaturas de formas desconhecidas com assinaturas conhecidas).
+- Análise de formas biológicas (por exemplo, contornos de células ou órgãos).
+- Inspeção de controle de qualidade para verificar a conformidade de formas.
+- Recuperação de imagens baseada em conteúdo (CBIR), onde formas são usadas como descritores.
+
+## Evidências
+<img width="500" height="640" alt="image" src="https://github.com/user-attachments/assets/6c4213b1-ab7c-40aa-b0ee-9c7af3bad1bf" />
+<img width="1000" height="367" alt="image" src="https://github.com/user-attachments/assets/200b571c-0591-42c4-af17-42374731a890" />
+
